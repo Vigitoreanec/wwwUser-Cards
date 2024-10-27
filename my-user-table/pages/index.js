@@ -1,4 +1,4 @@
-import { GetUser } from "../components";
+import {GetUser} from "../components/Index";
 
 export default function UserPages() {
     return <div>
