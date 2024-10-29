@@ -33,7 +33,7 @@ function YYYYMMToDate(str) {
 
 
 
-function GetCalendar({ date }) {
+const GetCalendar = memo(function GetCalendar({ date }) {
     const
         caption = (date.toLocaleDateString('ru', { month: 'long', year: 'numeric' })),
         year = date.getFullYear(),
@@ -56,9 +56,9 @@ function GetCalendar({ date }) {
         <Month shift={shift} max={max} />
     </table>
 
-};
+});
 
-function Month({ shift, max }) {
+const Month = memo(function Month({ shift, max }) {
     const
         arr = [];
     for (let start = 1 - shift; start <= max; start += 7) {
@@ -66,9 +66,9 @@ function Month({ shift, max }) {
     }
     console.debug('month');
     return <tbody>{arr}</tbody>;
-};
+});
 
-function Week({ start, max }) {
+const Week = memo(function Week({ start, max }) {
     const
         arr = [];
     for (let day = start; day < start + 7; day++)
@@ -77,4 +77,4 @@ function Week({ start, max }) {
         </td>);
     console.debug('week');
     return <tr>{arr}</tr>
-};
+});
