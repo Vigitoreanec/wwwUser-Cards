@@ -5,6 +5,8 @@ const
     pages = [
         { href: '/', name: 'GetUser' },
         { href: '/table', name: 'Table Users' },
+        { href: '/calendar', name: 'Calendar' },
+
         
     ]
 

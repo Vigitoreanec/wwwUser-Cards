@@ -40,35 +40,50 @@ table {
   border-collapse: collapse;
 }
 
-.fieldset{
+.fieldset {
   margin: 10px;
   padding-top: 5px;
   width: 350px;
+
 }
-.fieldset ol{
+
+.fieldset ol {
   margin: 20px;
-  
 
 }
 
-table, th, td {
+
+
+table,
+th,
+td {
   border: 1px solid black;
+
 }
 
-.header-table{
+.header-table {
   text-align: center;
 }
-.header-table span{
+
+.header-table span {
   padding: 30px;
-} 
-th, td {
+}
+
+th,
+td {
   padding: 8px;
-  text-align: left;
+  text-align: center;
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    color: red;
+  }
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #9f9e9e;
 }
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
